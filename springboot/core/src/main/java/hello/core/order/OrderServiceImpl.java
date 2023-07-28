@@ -12,9 +12,9 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private DiscountPolicy discountPolicy;
 
-    public OrderServiceImpl(MemoryMemberRepository memoryMemberRepository, DiscountPolicy fixDiscountPolicy) {
-        this.memberRepository = memoryMemberRepository;
-        this.discountPolicy = fixDiscountPolicy;
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
     }
 
     @Override
